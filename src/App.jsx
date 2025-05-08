@@ -42,7 +42,7 @@ export default function App() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/users');
+      const response = await fetch('https://backend-user-management-system-production.up.railway.app/users');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -103,7 +103,7 @@ export default function App() {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/user/${selectedUser.id}`, {
+      const response = await fetch(`https://backend-user-management-system-production.up.railway.app/user/${selectedUser.id}`, {
         method: 'DELETE',
       });
       
@@ -123,11 +123,11 @@ export default function App() {
     if (e) e.preventDefault();
     
     try {
-      let url = 'http://localhost:8080/user';
+      let url = 'https://backend-user-management-system-production.up.railway.app/user';
       let method = 'POST';
       
       if (formData.id && isEditModalOpen) {
-        url = `http://localhost:8080/user/${formData.id}`;
+        url = `https://backend-user-management-system-production.up.railway.app/user/${formData.id}`;
         method = 'PUT';
       }
       
