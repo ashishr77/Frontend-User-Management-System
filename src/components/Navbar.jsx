@@ -12,9 +12,9 @@ export default function Navbar() {
           <nav>
             <ul className="flex space-x-6">
               <li>
-                <a href="/" className="flex items-center hover:text-blue-200 transition-colors">
+                <a href="https://backend-user-management-system-production.up.railway.app/" className="flex items-center hover:text-blue-200 transition-colors">
                   <Check className="h-5 w-5 mr-1" />
-                  <span>Active</span>
+                  <span>Refresh Users</span>
                 </a>
               </li>
             </ul>
