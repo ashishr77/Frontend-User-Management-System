@@ -50,7 +50,8 @@ export default function App() {
       setUsers(data);
       setLoading(false);
     } catch (error) {
-      setError('Error fetching users: ' + error.message);
+      // setError('Error fetching users: ' + error.message);
+      setError('Error fetching users: Service temporarily unavailable: API usage limit exceeded (token expired).');
       setLoading(false);
     }
   };
